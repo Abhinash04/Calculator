@@ -8,13 +8,11 @@ body {
     text-align: center;
 }
 
-/*===============================
- Calculator Structure 
- =============*/
+/* Calculator Structure  */
 
 #calc {
-    width: 430px; /* Adjusted width */
-    height: auto; /* Adjusted height */
+    width: 430px;
+    height: auto;
     padding: 20px;
     border-radius: 20px;
     margin: 20px auto;
@@ -28,7 +26,7 @@ body {
     background: #c2dfe3;
     box-shadow: inset -5px 5px 4px #abc4c8, inset 5px -5px 4px #d9fafe;
     height: 35px;
-    width: 100%; /* Adjusted width */
+    width: 100%;
     padding: 5px;
     outline: none;
     border-radius: 10px;
@@ -46,9 +44,9 @@ body {
     outline: none;
     color: #e0fbfc;
     background: #253237;
-    width: calc(16.66% - 20px); /* Adjusted width */
+    width: calc(16.66% - 20px);
     height: 50px;
-    margin: 5px; /* Adjusted margin */
+    margin: 5px;
     font-weight: bold;
     border: none;
     font-size: 18px;
@@ -72,8 +70,8 @@ body {
     cursor: pointer;
     outline: none;
     color: #000;
-    width: calc(33.33% - 20px); /* Adjusted width */
-    height: 100px; /* Adjusted height */
+    width: calc(33.33% - 20px);
+    height: 100px; 
     border: none;
     margin-right: 10px;
     color: #e0fbfc;
