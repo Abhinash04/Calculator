@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scientific Calculator</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a scientific calculator resembling the fx-991ES model.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="spacer"></div>
+    <div id="calc">
+        <form>
+            <input type="text" id="calc-display" disabled>
+            <br>
+            <input type="button" value="C" class="keys" onclick="clearScreen()">
+            <input type="button" value="(" class="keys" onclick="toScreen('(')">
+            <input type="button" value=")" class="keys" onclick="toScreen(')')">
+            <input type="button" value="DEL" class="keys" onclick="deleteLastCharacter()">
+            <br>
+
+            <input type="button" value="7" class="keys" onclick="toScreen('7')">
+            <input type="button" value="8" class="keys" onclick="toScreen('8')">
+            <input type="button" value="9" class="keys" onclick="toScreen('9')">
+            <input type="button" value="÷" class="keys" onclick="toScreen('/')">
+            <br>
+
+            <input type="button" value="4" class="keys" onclick="toScreen('4')">
+            <input type="button" value="5" class="keys" onclick="toScreen('5')">
+            <input type="button" value="6" class="keys" onclick="toScreen('6')">
+            <input type="button" value="×" class="keys" onclick="toScreen('*')">
+            <br>
+
+            <input type="button" value="1" class="keys key2" onclick="toScreen('1')">
+            <input type="button" value="2" class="keys key2" onclick="toScreen('2')">
+            <input type="button" value="3" class="keys key2" onclick="toScreen('3')">
+            <input type="button" value="-" class="keys" onclick="toScreen('-')">
+            <br>
+
+            <input type="button" value="0" class="keys key3" onclick="toScreen('0')">
+            <input type="button" value="." class="keys key3" onclick="toScreen('.')">
+            <input type="button" value="EXP" class="keys key3" onclick="toScreen('Math.E')">
+            <input type="button" value="+" class="keys" onclick="toScreen('+')">
+            <br>
+
+            <input type="button" value="x²" class="keys" onclick="square()">
+            <input type="button" value="√" class="keys" onclick="squareRoot()">
+            <input type="button" value="x³" class="keys" onclick="cube()">
+            <input type="button" value="³√" class="keys" onclick="cubeRoot()">
+            <br>
+
+            <input type="button" value="sin" class="keys" onclick="trigFunction('sin')">
+            <input type="button" value="cos" class="keys" onclick="trigFunction('cos')">
+            <input type="button" value="tan" class="keys" onclick="trigFunction('tan')">
+            <input type="button" value="log" class="keys" onclick="log()">
+            <br>
+
+            <input type="button" value="asin" class="keys" onclick="trigFunction('asin')">
+            <input type="button" value="acos" class="keys" onclick="trigFunction('acos')">
+            <input type="button" value="atan" class="keys" onclick="trigFunction('atan')">
+            <input type="button" value="ln" class="keys" onclick="ln()">
+            <br>
+
+            <input type="button" value="EXP" class="keys key3" onclick="toScreen('Math.E')">
+            <input type="button" value="π" class="keys key3" onclick="toScreen('Math.PI')">
+            <input type="button" value="=" id="equals" class="set" onclick="answer()">
+        </form>
+    </div>
+    <div class="spacer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
