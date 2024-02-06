@@ -1,6 +1,6 @@
 var box = document.getElementById("calc-display");
 
-// Function to append the clicked button value or keyboard input to the display
+// Function to append the clicked button value to the display
 function toScreen(x) {
     box.value += x;
 }
@@ -16,7 +16,7 @@ function answer() {
 }
 
 // Function to calculate square
-function square() {
+function sqr() {
     let num = parseFloat(box.value);
     box.value = num * num;
 }
@@ -39,6 +39,54 @@ function cubeRoot() {
     box.value = Math.cbrt(num);
 }
 
+// Function to calculate trigonometric functions
+function trigFunction(func) {
+    let num = parseFloat(box.value);
+    switch (func) {
+        case 'sin':
+            box.value = Math.sin(num);
+            break;
+        case 'cos':
+            box.value = Math.cos(num);
+            break;
+        case 'tan':
+            box.value = Math.tan(num);
+            break;
+        case 'asin':
+            box.value = Math.asin(num);
+            break;
+        case 'acos':
+            box.value = Math.acos(num);
+            break;
+        case 'atan':
+            box.value = Math.atan(num);
+            break;
+    }
+}
+
+// Function to calculate logarithm
+function log() {
+    let num = parseFloat(box.value);
+    box.value = Math.log10(num);
+}
+
+// Function to calculate natural logarithm
+function ln() {
+    let num = parseFloat(box.value);
+    box.value = Math.log(num);
+}
+
+// Function to clear the display
+function clearScreen() {
+    box.value = '';
+}
+
+// Function to delete the last character from the display
+function deleteLastCharacter() {
+    let currentInput = box.value;
+    box.value = currentInput.substring(0, currentInput.length - 1);
+}
+
 // Function to handle keyboard input
 function handleKeyPress(event) {
     const key = event.key;
@@ -52,42 +100,5 @@ function handleKeyPress(event) {
     }
 }
 
-// Event listeners for keyboard input
+// Event listener for keyboard input
 document.addEventListener('keydown', handleKeyPress);
-
-// Add event listeners to buttons to trigger functions
-document.querySelectorAll('.keys').forEach(item => {
-    item.addEventListener('click', event => {
-        switch (item.value) {
-            case 'C':
-                clearScreen();
-                break;
-            case 'SQR':
-                square();
-                break;
-            case 'SQRT':
-                squareRoot();
-                break;
-            case 'CUB':
-                cube();
-                break;
-            case 'CUBRT':
-                cubeRoot();
-                break;
-            // Add cases for other functions here
-            default:
-                toScreen(item.value);
-        }
-    });
-});
-
-// Function to clear the display
-function clearScreen() {
-    box.value = '';
-}
-
-// Function to delete the last character from the display
-function deleteLastCharacter() {
-    let currentInput = box.value;
-    box.value = currentInput.substring(0, currentInput.length - 1);
-}
